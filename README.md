@@ -78,27 +78,7 @@ ICRC-7 does not handle approval-related operations such as approve and transfer_
 #### Deploying Icrc7 Canister
 
 ```bash
-dfx deploy icrc7 --argument '(record{                                  
-minting_account= opt record {
-    owner = principal "3yyxm-t5fpe-v32em-ac6lr-xyort-wuscb-dvl4x-3wnwi-hqkyj-xortw-oqe";                                     
-    subaccount = opt blob "\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00";
-  };                  
-icrc7_supply_cap= null;
-icrc7_description= opt "ICP Flower Collection";
-tx_window= null;                        
-permitted_drift= null;                  
-icrc7_max_take_value= null;
-icrc7_max_memo_size= null;
-icrc7_symbol= "ICFL";
-icrc7_max_update_batch_size= null;
-icrc7_max_query_batch_size= null;
-icrc7_atomic_batch_transfers= null;
-icrc7_default_take_value= null;
-icrc7_logo= null;
-icrc7_name= "ICP Flower";
-approval_init= null;
-archive_init= null
-})'
+dfx deploy icrc7 --argument '(record{ minting_account= opt record { owner = principal "uom2z-lqsqq-qbn4p-nts4l-2xjfl-oeivu-oso42-4t4jh-54ikd-ewnvi-tqe"; subaccount = opt blob "\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00"; }; icrc7_supply_cap= null; icrc7_description= opt "ICP Flower Collection"; tx_window= null; permitted_drift= null; icrc7_max_take_value= null; icrc7_max_memo_size= null; icrc7_symbol= "ICFL"; icrc7_max_update_batch_size= null; icrc7_max_query_batch_size= null; icrc7_atomic_batch_transfers= null; icrc7_default_take_value= null; icrc7_logo= null; icrc7_name= "ICP Flower"; approval_init= null; archive_init= null })'
 ```
 
 ```bash
@@ -137,20 +117,8 @@ archive_init= opt record {
 #### Minting NFT
 
 ```bash
-dfx canister call icrc7 mint '(record{                                  
-to= record {
-    owner = principal "3yyxm-t5fpe-v32em-ac6lr-xyort-wuscb-dvl4x-3wnwi-hqkyj-xortw-oqe";                                     
-    subaccount = opt blob "\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00";
-  };          
-token_id=1;
-memo= null;
-from_subaccount= null;                  
-token_description= opt "Token Number 1";
-token_logo= null;
-token_name= null
-})'
+dfx canister call icrc7 mint '(record{ to= record { owner = principal "uom2z-lqsqq-qbn4p-nts4l-2xjfl-oeivu-oso42-4t4jh-54ikd-ewnvi-tqe"; subaccount = opt blob "\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00"; }; token_id=1; memo= null; from_subaccount= null; token_description= opt "Token Number 1"; token_logo= null; token_name= null })'
 ```
-
 
 #### Transfer NFT
 
